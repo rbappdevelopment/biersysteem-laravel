@@ -165,7 +165,6 @@ return [
         /*
          * Package Service Providers...
          */
-        Barryvdh\Debugbar\ServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -228,8 +227,7 @@ return [
         'Str' => Illuminate\Support\Str::class,
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
-        'View' => Illuminate\Support\Facades\View::class,
-        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'View' => Illuminate\Support\Facades\View::class
     ],
 
 ];
