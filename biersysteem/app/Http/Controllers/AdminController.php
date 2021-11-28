@@ -47,11 +47,11 @@ class AdminController extends Controller
         catch (\Exception $ex){
             report($ex);
 
-            return redirect('biersysteem/admin/editperson')
+            return redirect('admin/editperson')
             ->with('failUpdateTitle', 'Er is iets fout gegaan!' . $ex . 'Bierstand is niet geüpdatet! Check je verbinding en probeer het opnieuw! Bij twijfel, check de mutaties rechtsbovenin!');
         }
 
-        return redirect('biersysteem/admin/editperson')
+        return redirect('admin/editperson')
         ->with('successfulUpdateTitle', 'Bierstand geüpdatet!')
         ->with('successfulUpdateBody', 'Bierstand aangepast voor  ' . $Bierstand->where('id', $id)->value('Heer') . ':  ' . $req->changeDrinksAmount . " is bij " . $oldValue . " opgeteld.")
         ->with('successfulUpdateEnd', "Totaal is nu: " . $Bierstand->Bier);
@@ -67,12 +67,12 @@ class AdminController extends Controller
         catch (\Exception $ex){
             report($ex);
 
-            return redirect('biersysteem/admin/editperson')
+            return redirect('admin/editperson')
             ->with('failNameTitle', 'Er is iets fout gegaan:')
             ->with('failNameBody', 'Naam is niet geüpdatet! Check je verbinding en probeer het opnieuw.');
         }
 
-        return redirect('biersysteem/admin/editperson')
+        return redirect('admin/editperson')
         ->with('successfulNameTitle', 'Naam geüpdatet!')
         ->with('successfulNameBody', 'Naam is aangepast van  ' . $oldValue . ' naar  ' . $Bierstand->Heer . '.');
     }
@@ -85,12 +85,12 @@ class AdminController extends Controller
         catch (\Exception $ex){
             report($ex);
 
-            return redirect('biersysteem/admin/editperson')
+            return redirect('admin/editperson')
             ->with('failDeleteTitle', 'Er is iets fout gegaan: ')
             ->with('failDeleteBody', 'Persoon is niet verwijderd! Check je verbinding en probeer het opnieuw.');
         }
 
-        return redirect('biersysteem/admin/editperson')
+        return redirect('admin/editperson')
         ->with('successfulDeleteTitle', 'Succesvol persoon verwijderd: ')
         ->with('successfulDeleteBody', $oldName . '.');
     }
