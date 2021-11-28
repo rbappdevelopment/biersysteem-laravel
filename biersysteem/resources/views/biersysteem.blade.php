@@ -144,7 +144,7 @@ $.ajaxSetup({
                 $('#showUpdateFail').hide();
             },
             success: function(res){
-                window.location = "/home?success";
+                window.location = "/?success";
             },
             error: function(jqXHR, textStatus, errorThrown) {
                 $('#sendRequestOverlay').hide();
