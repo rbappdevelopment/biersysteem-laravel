@@ -31,6 +31,6 @@ Route::get('/admin/person/{id}/mutations', [AdminController::class, 'GetMutation
 Auth::routes();
 
 //clear routes
-Route::get('/clear/routes', [AdminController::class, 'ClearRoutes']);
+Route::get('/clear/routes', [HomeController::class, 'ClearRoutes']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
