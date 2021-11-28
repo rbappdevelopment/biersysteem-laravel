@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Mutaties extends Model
 {
     use HasFactory;
+
+    protected $table = 'mutaties';
 }
