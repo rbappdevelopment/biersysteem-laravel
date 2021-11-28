@@ -15,17 +15,17 @@ use App\Http\Controllers\AdminController;
 */
 
 //Biersysteem routes
-Route::get('/biersysteem', [BiersysteemController::class, 'LoadBierstandData']);
-Route::post('/biersysteem/update', [BiersysteemController::class, 'UpdateBierstand']);
+Route::get('/', [BiersysteemController::class, 'LoadBierstandData']);
+Route::post('/update', [BiersysteemController::class, 'UpdateBierstand']);
 
 //Admin routes
-Route::get('/biersysteem/admin/addperson', [AdminController::class, 'LoadAdminPage_AddPerson']);
-Route::post('/biersysteem/admin/addperson', [AdminController::class, 'AddPerson'])->name('addperson');
-Route::get('/biersysteem/admin/editperson', [AdminController::class, 'LoadAdminPage_EditPerson']);
-Route::post('/biersysteem/admin/editperson/{id}', [AdminController::class, 'UpdateValue'])->name('updateperson');
-Route::post('/biersysteem/admin/editperson/{id}/name', [AdminController::class, 'UpdateName'])->name('updatename');
-Route::post('/biersysteem/admin/editperson/{id}/delete', [AdminController::class, 'DeletePerson'])->name('deletename');
-Route::get('/biersysteem/admin/person/{id}/mutations', [AdminController::class, 'GetMutationsForUser']);
+Route::get('/admin/addperson', [AdminController::class, 'LoadAdminPage_AddPerson']);
+Route::post('/admin/addperson', [AdminController::class, 'AddPerson'])->name('addperson');
+Route::get('/admin/editperson', [AdminController::class, 'LoadAdminPage_EditPerson']);
+Route::post('/admin/editperson/{id}', [AdminController::class, 'UpdateValue'])->name('updateperson');
+Route::post('/admin/editperson/{id}/name', [AdminController::class, 'UpdateName'])->name('updatename');
+Route::post('/admin/editperson/{id}/delete', [AdminController::class, 'DeletePerson'])->name('deletename');
+Route::get('/admin/person/{id}/mutations', [AdminController::class, 'GetMutationsForUser']);
 
 //Authentication & authorization
 Route::group(['prefix' => 'biersysteem'], function () {
@@ -35,4 +35,4 @@ Route::group(['prefix' => 'biersysteem'], function () {
 //clear routes
 Route::get('/clear/routes', [AdminController::class, 'ClearRoutes']);
 
-Route::get('/biersysteem/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
