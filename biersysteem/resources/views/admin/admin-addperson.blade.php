@@ -27,7 +27,7 @@
   <div class="form-group">
     <label for="exampleInputEmail1">Naam:</label>
     <input type="text" class="form-control" name="Heer" placeholder="Naam">
-    <small id="help" class="form-text text-muted">Let op hoofdletter(s). Vergeet bij een Heer niet er voorafgaand 'Heer' aan toe te voegen.<br>Elk nieuw persoon begint met 0 afgestreept pils.</small>
+    <small id="help" class="form-text text-muted">Let op hoofdletter(s).<br>Elk nieuw persoon begint met 0 afgestreept pils.</small>
   </div>
   <button type="submit" class="btn btn-primary">Toevoegen</button>
 </form>
