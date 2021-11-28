@@ -32,4 +32,7 @@ Route::group(['prefix' => 'biersysteem'], function () {
     Auth::routes();
 });
 
+//clear routes
+Route::get('/clear/routes', [AdminController::class, 'ClearRoutes']);
+
 Route::get('/biersysteem/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
