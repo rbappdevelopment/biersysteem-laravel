@@ -134,7 +134,7 @@ $.ajaxSetup({
     //send data
     $.ajax({
             type : "POST",
-            url  : "biersysteem/update",
+            url  : "update",
             data : { Personen }, //passing new bierstand values
             beforeSend: function(){
                 window.scrollTo(0, 0);
