@@ -78,7 +78,7 @@ class BiersysteemController extends Controller
                     $mutatie->save();
                 }
     }
-    return redirect('/biersysteem')->with('status', 'Er is afgestreept op ... [array van mensen + # drinks hier] !'); // TODO: Send array of people with beverages drank to show on view
+    return redirect('/')->with('status', 'Er is afgestreept op ... [array van mensen + # drinks hier] !'); // TODO: Send array of people with beverages drank to show on view
 }
 
 }

@@ -144,7 +144,7 @@ $.ajaxSetup({
                 $('#showUpdateFail').hide();
             },
             success: function(res){
-                window.location = "/biersysteem?success";
+                window.location = "/home?success";
             },
             error: function(jqXHR, textStatus, errorThrown) {
                 $('#sendRequestOverlay').hide();

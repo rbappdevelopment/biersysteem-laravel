@@ -327,7 +327,7 @@ $.ajaxSetup({
 
     $.ajax({
             type : "GET",
-            url  : "/biersysteem/admin/person/" + PersonId + "/mutations",
+            url  : "/admin/person/" + PersonId + "/mutations",
             cache: false,
             beforeSend: function(){
                 $('#loading-spinner').show();

@@ -18,7 +18,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/biersysteem') }}">
+                <a class="navbar-brand" href="{{ url('/') }}">
                     <i class="fas fa-home" style="font-size: 18pt"></i>
                         {{ config('app.name', 'Laravel') }}
                 </a>
@@ -57,10 +57,10 @@
                                     <a class="dropdown-item" data-toggle="modal" data-target="#mutatiesModal">
                                         Check mutaties <i class="fas fa-table"></i>
                                     </a>
-                                    <a class="dropdown-item" href="/biersysteem/admin/addperson">
+                                    <a class="dropdown-item" href="/admin/addperson">
                                         Persoon toevoegen <i class="fas fa-male"></i>
                                     </a>
-                                    <a class="dropdown-item" href="/biersysteem/admin/editperson">
+                                    <a class="dropdown-item" href="/admin/editperson">
                                         Aanpassen (admin) <i class="fas fa-pen"></i>
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
@@ -80,15 +80,6 @@
             </div>
         </nav>
     </div>
-
-{{-- <div class="header">
-  <a href="/biersysteem" class="logo">Biersysteem</a>
-    @if (Auth::user())
-    <div class="header-right">
-        <a href="/biersysteem/admin" class="logo">Admin</a>
-    </div>
-    @endif
-</div> --}}
 
   <!-- Modal -->
   <div class="modal fade" id="mutatiesModal" tabindex="-1" role="dialog" aria-hidden="true">
