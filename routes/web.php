@@ -28,9 +28,7 @@ Route::post('/admin/editperson/{id}/delete', [AdminController::class, 'DeletePer
 Route::get('/admin/person/{id}/mutations', [AdminController::class, 'GetMutationsForUser']);
 
 //Authentication & authorization
-Route::group(['prefix' => 'biersysteem'], function () {
-    Auth::routes();
-});
+Auth::routes();
 
 //clear routes
 Route::get('/clear/routes', [AdminController::class, 'ClearRoutes']);
