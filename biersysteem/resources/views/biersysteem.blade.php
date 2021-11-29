@@ -1,8 +1,9 @@
 @extends('includes.master')
 
+<link href="/css/app.css" rel="stylesheet" type="text/css">
+
 @section('content')
 
-<link href="/css/app.css" rel="stylesheet" type="text/css">
 
 <?php use \App\Http\Controllers\BiersysteemController;
 use App\Models\Bierstand;
