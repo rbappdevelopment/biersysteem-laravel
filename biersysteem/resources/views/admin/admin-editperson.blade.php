@@ -12,7 +12,7 @@ use App\Models\Mutaties;
 ?>
 
 @if(DB::table('users')->where('id', auth()->user()->id)->value('is_admin'))
-<h1 style="padding-left: 350px">ADMIN</h1>  
+<h1 style="text-align: center">ADMIN</h1>  
 
 {{-- All successful/fail alerts --}}
 @if (session('successfulUpdateTitle'))
