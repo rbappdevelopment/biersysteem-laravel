@@ -32,6 +32,10 @@
 
                     </ul>
 
+                    <div style="text-align: center">
+                        <img src="{{ URL::to('/images/priv\/') . "BD-logo-cut.jpg" }}" style="max-width: 25%; max-height: 25%;">
+                    </div>
+                    
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
