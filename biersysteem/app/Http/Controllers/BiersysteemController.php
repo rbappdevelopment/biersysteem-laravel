@@ -77,7 +77,7 @@ class BiersysteemController extends Controller
                     }
             }
 
-        return redirect('/biersysteem')->with('status', 'Er is afgestreept.');
+        return redirect('/')->with('status', 'Er is afgestreept.');
     }
 
 }
