@@ -65,7 +65,7 @@
                                         Persoon toevoegen <i class="fas fa-male"></i>
                                     </a>
                                     <a class="dropdown-item" href="/admin/editperson">
-                                        Aanpassen (admin) <i class="fas fa-pen"></i>
+                                        Aanpassen (adtmin) <i class="fas fa-pen"></i>
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
