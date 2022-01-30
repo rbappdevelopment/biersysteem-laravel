@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Bierstand;
 use App\Models\Mutaties;
+use App\Exports\BierstandExport;
+use Maatwebsite\Excel\Facades\Excel;
+
 class BiersysteemController extends Controller
 {
     public function __construct(){
@@ -78,6 +81,10 @@ class BiersysteemController extends Controller
             }
 
         return redirect('/biersysteem')->with('status', 'Er is afgestreept.');
+    }
+
+    public function exportData(){
+        return Excel::download(new BierstandExport, 'BierstandExport' . date('Y-m-d-Hi') . '.xlsx');
     }
 
 }

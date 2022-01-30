@@ -17,6 +17,7 @@ use App\Http\Controllers\AdminController;
 //Biersysteem routes
 Route::get('/biersysteem', [BiersysteemController::class, 'LoadBierstandData']);
 Route::post('/biersysteem/update', [BiersysteemController::class, 'UpdateBierstand']);
+Route::get('/biersysteem/export', [BiersysteemController::class, 'exportData']);
 
 //Admin routes
 Route::get('/biersysteem/admin/addperson', [AdminController::class, 'LoadAdminPage_AddPerson']);
@@ -26,6 +27,7 @@ Route::post('/biersysteem/admin/editperson/{id}', [AdminController::class, 'Upda
 Route::post('/biersysteem/admin/editperson/{id}/name', [AdminController::class, 'UpdateName'])->name('updatename');
 Route::post('/biersysteem/admin/editperson/{id}/delete', [AdminController::class, 'DeletePerson'])->name('deletename');
 Route::get('/biersysteem/admin/person/{id}/mutations', [AdminController::class, 'GetMutationsForUser']);
+
 
 //Authentication & authorization
 Route::group(['prefix' => 'biersysteem'], function () {
