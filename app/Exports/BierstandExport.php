@@ -3,27 +3,25 @@
 namespace App\Exports;
 
 use Maatwebsite\Excel\Concerns\FromCollection;
+use Maatwebsite\Excel\Concerns\WithTitle;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use App\Models\Bierstand;
+use Maatwebsite\Excel\Concerns\WithMultipleSheets;
+use App\Exports\CreateSheet;
 
-class BierstandExport implements FromCollection, WithHeadings
+class BierstandExport implements WithMultipleSheets
 {
-    public function headings(): array{
-        return [
-            'id',
-            'Naam',
-            'Bierstand',
-            'OnzichtbaarStand (wordt gebruikt voor de volgorde in de tabel)',
-            'AangemaaktDatum',
-            'UpdatedDatum' 
-        ];
-    }
 
     /**
-    * @return \Illuminate\Support\Collection
-    */
-    public function collection()
+     * @return array
+     */
+    public function sheets(): array
     {
-        return Bierstand::all();
+        $sheets = [];
+
+        $sheets[0] = new CreateSheet($tableName = "Bierstand");
+        $sheets[1] = new CreateSheet($tableName = "Mutaties");
+
+        return $sheets;
     }
 }
