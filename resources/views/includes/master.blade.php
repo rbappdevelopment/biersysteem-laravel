@@ -69,6 +69,9 @@
                                     <a class="dropdown-item" href="/biersysteem/export">
                                         Exporteer bierstand <i class="fas fa-arrow-alt-circle-down"></i>
                                     </a>
+                                    <a class="dropdown-item" href="/biersysteem/admin/export">
+                                        Download backup (VERSTUURT MAIL NAAR RBAPPDEV@GMAIL) <i class="fa fa-download"></i>
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

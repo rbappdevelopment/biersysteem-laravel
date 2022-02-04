@@ -27,6 +27,7 @@ Route::post('/biersysteem/admin/editperson/{id}', [AdminController::class, 'Upda
 Route::post('/biersysteem/admin/editperson/{id}/name', [AdminController::class, 'UpdateName'])->name('updatename');
 Route::post('/biersysteem/admin/editperson/{id}/delete', [AdminController::class, 'DeletePerson'])->name('deletename');
 Route::get('/biersysteem/admin/person/{id}/mutations', [AdminController::class, 'GetMutationsForUser']);
+Route::get('/biersysteem/admin/export', [AdminController::class, 'ExportDatabase']);
 
 
 //Authentication & authorization
