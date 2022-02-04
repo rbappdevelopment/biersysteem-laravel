@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Bierstand;
 use App\Models\Mutaties;
+use Spatie\DbDumper\Databases\MySql;
 
 class AdminController extends Controller
 {
@@ -22,6 +23,14 @@ class AdminController extends Controller
     public function GetMutationsForUser($id){
         $mutaties = Mutaties::where('HeerId', $id)->orderBy('created_at', 'desc')->paginate(50);
         return view('includes.mutationstable', compact('mutaties'));
+    }
+
+    public function ExportDatabase(){
+        MySql::create()
+        ->setDbName(env('DB_DATABASE'))
+        ->setUserName(env('DB_USERNAME'))
+        ->setPassword(env('DB_PASSWORD'))
+        ->dumpToFile('Db_dump-' . date('Y-m-d-Hi') . '.sql');
     }
 
     public function UpdateValue($id, Request $req){

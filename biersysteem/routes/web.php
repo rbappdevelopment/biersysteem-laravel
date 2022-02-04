@@ -26,6 +26,7 @@ Route::post('/admin/editperson/{id}', [AdminController::class, 'UpdateValue'])->
 Route::post('/admin/editperson/{id}/name', [AdminController::class, 'UpdateName'])->name('updatename');
 Route::post('/admin/editperson/{id}/delete', [AdminController::class, 'DeletePerson'])->name('deletename');
 Route::get('/admin/person/{id}/mutations', [AdminController::class, 'GetMutationsForUser']);
+Route::get('/admin/export', [AdminController::class, 'ExportDatabase']);
 
 //Authentication & authorization
 Auth::routes();

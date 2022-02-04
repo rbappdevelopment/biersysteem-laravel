@@ -67,6 +67,9 @@
                                     <a class="dropdown-item" href="/admin/editperson">
                                         Aanpassen (adtmin) <i class="fas fa-pen"></i>
                                     </a>
+                                    <a class="dropdown-item" href="/biersysteem/admin/export">
+                                        Download backup (test)<i class="fa fa-download"></i>
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
